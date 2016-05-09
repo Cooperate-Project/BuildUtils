@@ -5,7 +5,7 @@
 #
 #	before_install:
 #   - git clone --depth 1 https://github.com/Cooperate-Project/BuildUtils.git /tmp/BuildUtils
-#	- ./tmp/BuildUtils/setup.sh
+#	- ./tmp/BuildUtils/travisci/setup.sh
 #	install: true
 #	script:
 #	- ./mavenBuild.sh
