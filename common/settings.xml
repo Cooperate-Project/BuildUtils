@@ -13,15 +13,25 @@
 			</activation>
 			<properties>
 				<sonar.host.url>https://mammutbaum36.fzi.de/sonar</sonar.host.url>
-				<sonar.login>${env.SONAR_USERNAME}</sonar.login>
-				<sonar.password>${env.SONAR_PASSWORD}</sonar.password>
+				<sonar.login>travisci</sonar.login>
+				<sonar.password>{cH8Hjd5XBlYHD0ejg0L/6vKvULbxqK/Br9klC0eH6exh7NZc0Zb2sMk+j++ewwJ0}</sonar.password>
 			</properties>
 		</profile>
 	</profiles>
 	<servers>
 		<server>
 			<id>github-cooperate-deploy</id>
-			<password>${env.DEPLOY_APIKEY}</password>
+			<password>{2ePfP9imHYsHmcJfBcPmr5mNA1z4T4X67qrsFGwkx7LwZ6ykk711oaCviReSNYrO5/UW5fTn+Q4ui7FSHOWgGg==}</password>
+		</server>
+		<server>
+			<id>cooperate-repository</id>
+			<username>cooperate-deployment</username>
+			<password>{0X4v1oeeVEMHlqNy5w3YJvxWEp9WL8S8Nu68JW0mjWfzW9AxyZFK8R6t8ucIcSYP}</password>
+		</server>
+		<server>
+			<id>cooperate-packagedrone</id>
+			<username>deploy</username>
+			<password>{ylsxsUQq9/8HoUj7+VQTm81BcWmmdTXWwOm1+uqse9euKPL+Ze7jJiAhEjYDwGKFzG/CjsdSjb47VZXBtR8+N3W0YmR3fHRMJKq9//u8v00/DBnzkNDJyqOYVKGNLSs1}</password>
 		</server>
 	</servers>
 </settings>

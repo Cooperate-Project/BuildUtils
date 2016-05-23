@@ -8,7 +8,7 @@
 #	- . /tmp/BuildUtils/travisci/setup.sh
 #	install: true
 #	script:
-#	- ./mavenBuild.sh
+#	- mavenBuild.sh
 #
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
