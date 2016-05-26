@@ -13,6 +13,7 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+. $DIR/xvfb.sh
 . $DIR/mavenInstall.sh
 . $DIR/mavenInstallLetsencrypt.sh
 . $DIR/mavenSettings.sh
