@@ -20,6 +20,11 @@
 	</profiles>
 	<servers>
 		<server>
+			<id>github.com</id>
+			<username>CooperateDeploy</username>
+			<password>{CY1EzTceo5EHTCQmkZwSwaGDKwjCUJZM3OUIkhUnuAEfSdDH3WAU5Aj/2LhhOVrl}</password>
+		</server>
+		<server>
 			<id>github-cooperate-deploy</id>
 			<password>{2ePfP9imHYsHmcJfBcPmr5mNA1z4T4X67qrsFGwkx7LwZ6ykk711oaCviReSNYrO5/UW5fTn+Q4ui7FSHOWgGg==}</password>
 		</server>
