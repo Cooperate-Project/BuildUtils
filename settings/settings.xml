@@ -51,5 +51,10 @@
 			<username>deploy</username>
 			<password>{ylsxsUQq9/8HoUj7+VQTm81BcWmmdTXWwOm1+uqse9euKPL+Ze7jJiAhEjYDwGKFzG/CjsdSjb47VZXBtR8+N3W0YmR3fHRMJKq9//u8v00/DBnzkNDJyqOYVKGNLSs1}</password>
 		</server>
+		<server>
+			<id>cooperate-bintray</id>
+			<username>cooperate-project-deploy</username>
+			<password>{KKwtII42WIcHmdoMT4BcOGCxWY6mggRUQXL/xVR055hbTm2XNZsXcD5cu2W7OR3GJZ3gj+FciNNGGRCGFw+oSA==}</password>
+		</server>
 	</servers>
 </settings>
