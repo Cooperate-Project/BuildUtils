@@ -18,17 +18,30 @@
 			</properties>
 		</profile>
 		<profile>
-			<id>cooperate</id>
+			<id>cooperate-maven-repositories</id>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<repositories>
 				<repository>
-					<id>cooperate-repo</id>
-					<name>Cooperate Maven Repository</name>
-					<url>https://mammutbaum36.fzi.de/maven/cooperate</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>bintray-cooperate-project-MavenPlugins</id>
+					<name>bintray</name>
+					<url>http://dl.bintray.com/cooperate-project/MavenPlugins</url>
 				</repository>
 			</repositories>
+			<pluginRepositories>
+				<pluginRepository>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+					<id>bintray-cooperate-project-MavenPlugins</id>
+					<name>bintray-plugins</name>
+					<url>http://dl.bintray.com/cooperate-project/MavenPlugins</url>
+				</pluginRepository>
+			</pluginRepositories>
 		</profile>
 	</profiles>
 	<servers>
