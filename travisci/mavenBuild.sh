@@ -8,6 +8,6 @@ elif [ "$TRAVIS_BRANCH" = "master" ] || [ -n "$TRAVIS_TAG" ]; then
 	echo mvn clean deploy \&\& mvn sonar:sonar
 	mvn clean deploy && mvn sonar:sonar
 else
-	echo mvn -Dsonar.branch="$TRAVIS_BRANCH" clean verify \&\& mvn sonar:sonar
-	mvn -Dsonar.branch="$TRAVIS_BRANCH" clean verify && mvn sonar:sonar
+	echo mvn clean verify \&\& mvn -Dsonar.branch="$TRAVIS_BRANCH" sonar:sonar
+	mvn clean verify && mvn -Dsonar.branch="$TRAVIS_BRANCH" sonar:sonar
 fi
