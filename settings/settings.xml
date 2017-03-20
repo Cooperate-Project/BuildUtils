@@ -43,6 +43,19 @@
 				</pluginRepository>
 			</pluginRepositories>
 		</profile>
+		<profile>
+			<id>tycho-snapshots</id>
+			<pluginRepositories>
+				<pluginRepository>
+					<id>maven-tycho-snapshots</id>
+					<name>Maven Tycho Snapshots</name>
+					<url>https://repo.eclipse.org/content/repositories/tycho-snapshots</url>
+					<releases>
+						<enabled>false</enabled>
+					</releases>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>
 	</profiles>
 	<servers>
 		<server>

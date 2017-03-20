@@ -89,14 +89,14 @@ echo "Release version:     $RELEASE_VERSION"
 echo "Development version: $DEV_VERSION"
 
 git checkout -b "tmp/Release$RELEASE_VERSION"
-createPoms .
+#createPoms .
 set -x
-mvn org.eclipse.tycho:tycho-versions-plugin:update-pom -Dtycho.mode=maven
-mvn org.eclipse.tycho:tycho-versions-plugin:set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=$RELEASE_VERSION
+mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0-SNAPSHOT:update-pom -Dtycho.mode=maven -Ptycho-snapshots
+mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0-SNAPSHOT::set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=$RELEASE_VERSION -Ptycho-snapshots
 git commit -am "[Release Process] Set release version to $RELEASE_VERSION"
 mvn clean verify
 git tag "releases/$RELEASE_VERSION"
-mvn org.eclipse.tycho:tycho-versions-plugin:set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=$DEV_VERSION
+mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0-SNAPSHOT::set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=$DEV_VERSION -Ptycho-snapshots
 git commit -am "[Release Process] Set development version to $DEV_VERSION"
 mvn clean verify
 git checkout $BRANCH
