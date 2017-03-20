@@ -8,6 +8,6 @@ elif [ "$TRAVIS_BRANCH" = "master" ] || [ -n "$TRAVIS_TAG" ]; then
 	echo mvn clean deploy \&\& mvn -Dtycho.mode=maven sonar:sonar
 	mvn clean deploy && mvn -Dtycho.mode=maven sonar:sonar
 else
-	echo mvn clean verify \&\& mvn -Dsonar.branch="$TRAVIS_BRANCH" -Dtycho.mode=maven sonar:sonar
-	mvn clean verify && mvn -Dsonar.branch="$TRAVIS_BRANCH" -Dtycho.mode=maven sonar:sonar
+	echo mvn clean install \&\& mvn -Dsonar.branch="$TRAVIS_BRANCH" -Dtycho.mode=maven sonar:sonar
+	mvn clean install && mvn -Dsonar.branch="$TRAVIS_BRANCH" -Dtycho.mode=maven sonar:sonar
 fi
