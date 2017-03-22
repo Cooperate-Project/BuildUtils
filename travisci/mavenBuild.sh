@@ -5,9 +5,9 @@ if [ "$TRAVIS_PULL_REQUEST" != "false" ]; then
 	echo mvn clean verify
 	mvn clean verify
 elif [ "$TRAVIS_BRANCH" = "master" ] || [ -n "$TRAVIS_TAG" ]; then
-	echo mvn clean deploy \&\& mvn -Dtycho.mode=maven sonar:sonar
-	mvn clean deploy && mvn -Dtycho.mode=maven sonar:sonar
+	echo clean deploy sonar:sonar
+	mvn clean deploy sonar:sonar
 else
-	echo mvn clean install \&\& mvn -Dsonar.branch="$TRAVIS_BRANCH" -Dtycho.mode=maven sonar:sonar
-	mvn clean install && mvn -Dsonar.branch="$TRAVIS_BRANCH" -Dtycho.mode=maven sonar:sonar
+	echo mvn clean verify sonar:sonar -Dsonar.branch="$TRAVIS_BRANCH"
+	mvn clean verify sonar:sonar -Dsonar.branch="$TRAVIS_BRANCH"
 fi
