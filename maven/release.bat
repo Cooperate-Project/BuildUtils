@@ -29,10 +29,10 @@ timeout 5
 
 @echo on
 git checkout -b tmp/Release%RELEASE_VERSION% || goto COMMAND_ERROR
-call mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0-SNAPSHOT:update-pom -Dtycho.mode=maven -Ptycho-snapshots
+call mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0:update-pom -Dtycho.mode=maven
 if %errorlevel% NEQ 0 goto COMMAND_ERROR
 @echo on
-call mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0-SNAPSHOT::set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=%RELEASE_VERSION% -Ptycho-snapshots
+call mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0::set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=%RELEASE_VERSION%
 if %errorlevel% NEQ 0 goto COMMAND_ERROR
 @echo on
 git commit -am "[Release Process] Set release version to %RELEASE_VERSION%" || goto COMMAND_ERROR
@@ -40,7 +40,7 @@ call mvn clean verify
 if %errorlevel% NEQ 0 goto COMMAND_ERROR
 @echo on
 git tag "releases/%RELEASE_VERSION%" || goto COMMAND_ERROR
-call mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0-SNAPSHOT::set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=%DEV_VERSION% -Ptycho-snapshots
+call mvn org.eclipse.tycho:tycho-versions-plugin:1.1.0::set-version -Dtycho.mode=maven -DupdateVersionRangeMatchingBounds=true -DnewVersion=%DEV_VERSION%
 if %errorlevel% NEQ 0 goto COMMAND_ERROR
 @echo on
 git commit -am "[Release Process] Set development version to %DEV_VERSION%" || goto COMMAND_ERROR
