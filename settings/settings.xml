@@ -65,7 +65,7 @@
 			<properties>
 				<gpg.executable>gpg</gpg.executable>
 				<gpg.keyname>CE7712CC</gpg.keyname>
-				<gpg.passphrase>{env.MVN_MASTERPW}</gpg.passphrase>
+				<gpg.passphraseServerId>gpg.passphrase</gpg.passphraseServerId>
 			</properties>
 		</profile>
 	</profiles>
@@ -98,6 +98,10 @@
 			<id>ossrh</id>
 			<username>seiferma</username>
 			<password>{lYo7rH08rM0HJPtwT499VPSV2ppUzH3kSZAqOzZduEiXsdpsPHAmpOUOsTDQrWE0}</password>
+		</server>
+		<server>
+			<id>gpg.passphrase</id>
+			<passphrase>{1lLRBA730I0HG9Rdt+RZtJCXYTokeg6oauOdsoMbCInf/F+CdDAovMgNlRipuh6DPk2s1DUyktmurBxywz3k32F/9PCWweRRZJPLDlrk5ZZp162pTqWlbP6hVdnuXMUN}</passphrase>
 		</server>
 	</servers>
 </settings>
