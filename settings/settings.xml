@@ -65,7 +65,7 @@
 			<properties>
 				<gpg.executable>gpg</gpg.executable>
 				<gpg.keyname>CE7712CC</gpg.keyname>
-				<gpg.passphrase>{env.GPG_PASSPHRASE}</gpg.passphrase>
+				<gpg.passphrase>{env.MVN_MASTERPW}</gpg.passphrase>
 			</properties>
 		</profile>
 	</profiles>

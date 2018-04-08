@@ -7,5 +7,4 @@ else
 	echo $MVN_MASTERPW | gpg --passphrase-fd 0 -o /tmp/cooperate.key $DIR/cooperate.key.asc
 	echo $MVN_MASTERPW | gpg --passphrase-fd 0 --batch --yes --import /tmp/cooperate.key
 	rm /tmp/cooperate.key
-	export GPG_PASSPHRASE=$MVN_MASTERPW
 fi
