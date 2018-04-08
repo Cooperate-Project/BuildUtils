@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z ${var+x} ]; then
+if [ -z ${MVN_MASTERPW+x} ]; then
 	echo "Skipping GPG initialization"
 else
 	DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
