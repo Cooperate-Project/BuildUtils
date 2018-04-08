@@ -65,7 +65,7 @@
 			<properties>
 				<gpg.executable>gpg</gpg.executable>
 				<gpg.keyname>CE7712CC</gpg.keyname>
-				<gpg.passphraseServerId>CE7712CC</gpg.passphraseServerId>
+				<gpg.passphrase>{env.GPG_PASSPHRASE}</gpg.passphrase>
 			</properties>
 		</profile>
 	</profiles>
@@ -93,10 +93,6 @@
 			<id>cooperate-bintray</id>
 			<username>cooperate-project-deploy</username>
 			<password>{KKwtII42WIcHmdoMT4BcOGCxWY6mggRUQXL/xVR055hbTm2XNZsXcD5cu2W7OR3GJZ3gj+FciNNGGRCGFw+oSA==}</password>
-		</server>
-		<server>
-			<id>CE7712CC</id>
-			<password>{1lLRBA730I0HG9Rdt+RZtJCXYTokeg6oauOdsoMbCInf/F+CdDAovMgNlRipuh6DPk2s1DUyktmurBxywz3k32F/9PCWweRRZJPLDlrk5ZZp162pTqWlbP6hVdnuXMUN}</password>
 		</server>
 		<server>
 			<id>ossrh</id>
