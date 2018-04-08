@@ -15,5 +15,6 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 . $DIR/xvfb.sh
 . $DIR/mavenSettings.sh
+. $DIR/signingSetup.sh
 
 export PATH=$DIR:$PATH
