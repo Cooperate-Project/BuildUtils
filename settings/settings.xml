@@ -5,6 +5,7 @@
 	<pluginGroups>
 		<pluginGroup>org.sonarsource.scanner.maven</pluginGroup>
 	</pluginGroups>
+	<interactiveMode>false</interactiveMode>
 	<profiles>
 		<profile>
 			<id>sonar</id>
